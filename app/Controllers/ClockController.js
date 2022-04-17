@@ -8,6 +8,9 @@ function _drawClock(){
     let min = time.getMinutes();
     let noon = "AM"
     
+    if (min<10) {
+        min = "0"+min.toString()
+    }
     if (hour >=12){
         noon = "PM"
         // console.log(noon);

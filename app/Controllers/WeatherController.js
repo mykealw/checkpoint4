@@ -23,12 +23,12 @@ export class WeatherController{
     
     _flip(){
     if (count === true) {
-           document.getElementById("weatherC").classList.add("d-none")
-           document.getElementById("weatherF").classList.remove("d-none")
+           document.getElementById("1").classList.add("d-none")
+           document.getElementById("2").classList.remove("d-none")
        } 
     if(count === false) {
-           document.getElementById("weatherC").classList.remove("d-none")
-           document.getElementById("weatherF").classList.add("d-none")   
+           document.getElementById("1").classList.remove("d-none")
+           document.getElementById("2").classList.add("d-none")   
        }
        count = !count
     }
