@@ -15,37 +15,49 @@
 </head>
 
 <body id="body">
-  <main>
+  <main class="">
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <div onmousedown="app.weatherController._flip()">
-            <h2 id="weatherC" class="">weather here</h2>     
-            <h2 id="weatherF" class="d-none">weather here</h2>     
+      <div class="row ">
+        <div class="col-md-12 d-flex">
+          <div class="d-flex" onmousedown="app.weatherController._flip()">
+            <h2 id="weatherC" class="">weather here</h2>
+            <h2 id="weatherF" class="d-none">weather here</h2>
           </div>
         </div>
-        <div class="col-md-12">
-          <h1 id="clock">Clock here</h1>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row d-flex">
+        <div class="col-md-12 d-flex">
+          <h1 class="d-flex text-shadow text-light" id="clock">Clock here</h1>
         </div>
-        <div class="col-md-3">
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row d-flex pos-bot">
+        <div class="col-md-4">
           <h3>Today:</h3>
+          <div id="counts">
+
+          </div>
           <ul id="todo">
             <!-- <li>
-              <input class="form-check-input me-1 " type="checkbox" value="" aria-label="..." onmousedown="">
-              <span class="">Task description Words here</span><i
-              class="mdi mdi-delete text-dark selectable on-hover"></i>
-            </li> -->
+          <input class="form-check-input me-1 " type="checkbox" value="" aria-label="..." onmousedown="">
+          <span class="">Task description Words here</span><i
+          class="mdi mdi-delete text-dark selectable on-hover"></i>
+        </li> -->
           </ul>
           <form class="bg-light" onsubmit="app.tasksController.addTask()">
             <div class="input-group bg-light">
               <label for="todo" class="form-label visually-hidden">New Task</label>
               <input type="text" class="form-control" placeholder="New Task" name="todo" id="todo" minlength="3"
-              maxlength="50" required>
+                maxlength="50" required>
               <button class="btn btn-outline-secondary bg-light" type="submit">+</button>
             </div>
-          </form>    
+          </form>
         </div>
-        <div class="col-md-9">
+        <div class="col-md-8">
           <div class="bgShower">
             <h3 id="quote" class="text-light text-shadow">Test Quote</h3>
             <h3 id="author" class="on-hover text-light text-shadow">Test author</h3>
@@ -53,8 +65,6 @@
         </div>
       </div>
     </div>
-    </div>
-
 
 
 

@@ -6,8 +6,19 @@ function _drawTasks() {
     let template = ''
     ProxyState.tasks.forEach(task => template += task.Template)
     document.getElementById("todo").innerHTML = template
+    _drawTotals()
 }
 
+function _drawTotals(){
+let template = ''
+ProxyState.tasks.forEach(c => template += c.CountTemplate)
+
+for (let i = 0; i < 1; i++) {
+    template += 
+}
+document.getElementById("counts").innerHTML = template
+console.log(template, "here is template");
+}
 
 export class TasksController {
     constructor() {

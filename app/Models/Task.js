@@ -1,3 +1,4 @@
+import { ProxyState } from "../AppState.js"
 
 
 export class Task{
@@ -22,4 +23,27 @@ constructor(data){
       </li>`
 
     }
+
+    get CountTemplate(){
+        return `<h3>${this.CompletedCount}/${this.TotalCount} </h3>`
+    }
+
+    get TotalCount(){
+        let TotalCount = ProxyState.tasks.length
+        return TotalCount
+    }
+    get CompletedCount(){
+        let CompletedCount =0
+       let cCount = ProxyState.tasks
+for (let i = 0; i < cCount.length; i++) {
+    if(cCount[i].completed == true){
+        CompletedCount++
+
+    }
 }
+           
+return CompletedCount
+       }
+
+    }
+
