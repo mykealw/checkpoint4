@@ -16,7 +16,7 @@ constructor(data){
     
     get Template(){
         return ` <li>
-        <input class="form-check-input me-1 " type="checkbox" value="" aria-label="..." onmousedown="">
+        <input class="form-check-input me-1 " type="checkbox" value="" aria-label="..." onclick="app.tasksController.flipBool(this.id}">
         <span class=""${this.checked == true ? "text-decoration-line-through" : ''}"">${this.description}</span><i
           class="mdi mdi-delete text-dark selectable on-hover" onclick="app.tasksController.deleteTask('${this.id}')"></i>
       </li>`

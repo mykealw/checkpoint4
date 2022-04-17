@@ -45,10 +45,13 @@ export class TasksController {
 
     async deleteTask(taskID){
         try {
-            // const removedTask = 
-            console.log(taskID, "this taskID");
-            await tasksService.deleteTask(taskID)
-            //   Pop.toast("${removedTask.name} is delorted!", 'success')
+            if(await Pop.confirm()){
+
+                // const removedTask = 
+                // console.log(taskID, "this taskID");
+                await tasksService.deleteTask(taskID)
+                Pop.toast("${removedTask.name} is delorted!", 'success')
+            }
         }
         catch(error) {
             Pop.toast(error.message, "error");
@@ -56,6 +59,14 @@ export class TasksController {
         }
     }
 
+    async flipBool(taskflip){
+        try {
+            await tasksService.flipBool(taskflip)
+        } catch (error) {
+            Pop.toast(error.message, "error");
+            console.error(error);
+        }
+    }
 
 
 
