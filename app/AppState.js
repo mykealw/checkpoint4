@@ -1,6 +1,8 @@
 import { Task } from "./Models/Task.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
+import { Quote }  from "./Models/Quote.js"
+import { QuoteController } from "./Controllers/QuoteController.js"
 
 class AppState extends EventEmitter {
   /** @type {import('./Models/Value').Value[]} */
@@ -12,7 +14,7 @@ class AppState extends EventEmitter {
 
   weather = 0
   quotes = ""
-  author = ""
+  authors = ""
 
 
 

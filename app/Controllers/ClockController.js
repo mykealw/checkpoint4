@@ -10,7 +10,7 @@ function _drawClock(){
     
     if (hour >=12){
         noon = "PM"
-        console.log(noon);
+        // console.log(noon);
     }
     let clock = hour + ":" + min + " " + noon
     document.getElementById("clock").innerText = clock

@@ -18,15 +18,14 @@
   <main>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-3" id="quote">
-          <h3 id="quote">Test Quote</h3>
-          <h3 id="author">Test author</h3>
+        <div class="col-md-12">
+          <div onclick="app.weatherController._flip()">
+            <h2 id="weatherC" class="">weather here</h2>     
+            <h2 id="weatherF" class="d-none">weather here</h2>     
+          </div>
         </div>
-        <div class="col-md-3">
-          <h2 id="clock">Clock here</h2>
-        </div>
-        <div class="col-md-3">
-          <h2 id="weather">weather here</h2>
+        <div class="col-md-12">
+          <h1 id="clock">Clock here</h1>
         </div>
         <div class="col-md-3">
           <h3>Today:</h3>
@@ -34,20 +33,26 @@
             <!-- <li>
               <input class="form-check-input me-1 " type="checkbox" value="" aria-label="..." onmousedown="">
               <span class="">Task description Words here</span><i
-                class="mdi mdi-delete text-dark selectable on-hover"></i>
+              class="mdi mdi-delete text-dark selectable on-hover"></i>
             </li> -->
           </ul>
-            <form class="bg-light" onsubmit="app.tasksController.addTask()">
-              <div class="input-group bg-light">
-                <label for="todo" class="form-label visually-hidden">New Task</label>
-                <input type="text" class="form-control" placeholder="New Task" name="todo" id="todo" minlength="3"
-                  maxlength="50" required>
-                <button class="btn btn-outline-secondary bg-light" type="submit">+</button>
-              </div>
-            </form>
-
+          <form class="bg-light" onsubmit="app.tasksController.addTask()">
+            <div class="input-group bg-light">
+              <label for="todo" class="form-label visually-hidden">New Task</label>
+              <input type="text" class="form-control" placeholder="New Task" name="todo" id="todo" minlength="3"
+              maxlength="50" required>
+              <button class="btn btn-outline-secondary bg-light" type="submit">+</button>
+            </div>
+          </form>    
+        </div>
+        <div class="col-md-9">
+          <div class="bgShower">
+            <h3 id="quote" class="text-light text-shadow">Test Quote</h3>
+            <h3 id="author" class="on-hover text-light text-shadow">Test author</h3>
+          </div>
         </div>
       </div>
+    </div>
     </div>
 
 
@@ -62,16 +67,15 @@
 
   </main>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"
-    integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
-    integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
-  <script src="app/main.js" type="module"></script>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"
+  integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
+  integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
+<script src="app/main.js" type="module"></script>
 
 </html>

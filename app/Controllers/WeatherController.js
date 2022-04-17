@@ -4,21 +4,38 @@ import{ weatherService} from "../Services/WeatherService.js"
 
 
 function _drawWeather(){
-    document.getElementById("weather").innerText = ProxyState.weather.toString()
+    let weather = ProxyState.weather
+    let celcius = (weather - 273.15).toFixed(1)
+    document.getElementById("weatherC").innerText = celcius.toString()
+    let faren = ((celcius * (9/5)+ 32)).toFixed(1)
+    document.getElementById("weatherF").innerText = faren.toString()
 }
+
 
 export class WeatherController{
     constructor(){
-        // ProxyState.on("weather", _drawWeather);
+        ProxyState.on("weather", _drawWeather);
         this.getWeather()
-        // _drawWeather()
+        _drawWeather()
         // console.log("hello from weather");
-
-
+        
+        
     }
-
-async getWeather(){
-    try {
+    
+    _flip(){
+       let count = true
+       if( count){
+           document.getElementById("weatherC").classList.add("d-none")
+           document.getElementById("weatherF").classList.remove("d-none")
+           count = !count
+       }else{
+           document.getElementById("weatherC").classList.remove("d-none")
+           document.getElementById("weatherF").classList.add("d-none")
+           count = true
+       }
+    }
+    async getWeather(){
+        try {
         await weatherService.getWeather()
     } catch (error) {
         Pop.toast(error.message, "error")
