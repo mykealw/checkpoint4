@@ -25,7 +25,7 @@ constructor(data){
     }
 
     get CountTemplate(){
-        return `<h3>${this.CompletedCount}/${this.TotalCount} </h3>`
+        return `<h5>${this.CompletedCount}/${this.TotalCount} </h5>`
     }
 
     get TotalCount(){
@@ -38,10 +38,8 @@ constructor(data){
 for (let i = 0; i < cCount.length; i++) {
     if(cCount[i].completed == true){
         CompletedCount++
-
     }
 }
-           
 return CompletedCount
        }
 
