@@ -8,10 +8,10 @@ class AppState extends EventEmitter {
     /** @type {import('./Models/Task').Task[]} */
   tasks = []
   
-  image = []
+  image = ""
   clock = []
   weather=[]
-  quote =[]
+  quote =""
 
 }
 

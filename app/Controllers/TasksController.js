@@ -12,7 +12,7 @@ function _drawTasks() {
 export class TasksController {
     constructor() {
         // console.log("hello from tasks");
-        this._getTasks()
+        this.getTasks()
         ProxyState.on("tasks", _drawTasks);
         _drawTasks()
 
@@ -34,7 +34,7 @@ export class TasksController {
             console.log(error);
         }
     }
-    async _getTasks() {
+    async getTasks() {
         try {
             await tasksService.getTasks()
         } catch (error) {
