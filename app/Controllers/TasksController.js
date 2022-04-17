@@ -50,7 +50,7 @@ export class TasksController {
                 // const removedTask = 
                 // console.log(taskID, "this taskID");
                 await tasksService.deleteTask(taskID)
-                Pop.toast("${removedTask.name} is delorted!", 'success')
+                Pop.toast("Task is delorted!", 'success')
             }
         }
         catch(error) {
@@ -61,6 +61,7 @@ export class TasksController {
 
     async flipBool(taskflip){
         try {
+            // debugger
             await tasksService.flipBool(taskflip)
         } catch (error) {
             Pop.toast(error.message, "error");
