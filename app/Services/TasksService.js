@@ -9,7 +9,7 @@ class TasksService {
       foundTask.completed = !foundTask.completed
         ProxyState.tasks = ProxyState.tasks.filter(t => t.id !== taskflip)
       const res = await sandboxApi.put('mykeal/todos/' + taskflip, foundTask )
-      console.log(res.data, "here is the res", taskflip, "here is task flip");
+      // console.log(res.data, "here is the res", taskflip, "here is task flip");
     //   const task = new Task(res.data)
     //   const index = ProxyState.tasks.findIndex(t => t.id == task.id)
     //   ProxyState.tasks.splice(index, 1, task)
@@ -31,7 +31,7 @@ ProxyState.tasks = res.data.map(t => new Task(t))
        let newTask = new Task(taskData)
     //    console.log(taskData, "2nd attempt");
        const res = await sandboxApi.post('mykeal/todos', newTask)
-       console.log(res.data, "here is the res");
+      //  console.log(res.data, "here is the res");
        res.data = new Task(res.data)
        ProxyState.tasks = [...ProxyState.tasks, res.data]
     }

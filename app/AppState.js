@@ -10,8 +10,10 @@ class AppState extends EventEmitter {
   
   image = ""
   clock = []
-  weather=[]
-  quote =""
+  weather= []
+  quotes = "fuck this"
+  author = "suck ass"
+ 
 
 }
 

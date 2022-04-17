@@ -14,7 +14,7 @@ export class ImageController {
 constructor(){
     this.getImage()
 ProxyState.on("image", _drawImage);
-_drawImage()
+// _drawImage()
 // console.log("hello from image");
 
     
@@ -22,7 +22,7 @@ _drawImage()
 
 async getImage(){
 try {
-    imageService.getImage()
+  await  imageService.getImage()
 } catch (error) {
     Pop.toast(error.message, "error")
     console.log(error);
