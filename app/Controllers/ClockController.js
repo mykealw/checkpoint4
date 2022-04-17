@@ -23,7 +23,7 @@ export class ClockController {
         _drawClock()
 // console.log("hello from clocks");
 
-setInterval(_drawClock, 10000);
+setInterval(_drawClock, 5000);
     }
 
 

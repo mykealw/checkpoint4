@@ -11,7 +11,7 @@ class App {
   clockController = new ClockController();
   tasksController = new TasksController();
   imageController = new ImageController();
-  weatherController = new WeatherController();
+  // weatherController = new WeatherController();
   quoteController = new QuoteController();
 
 

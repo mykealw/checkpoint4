@@ -5,15 +5,16 @@ import { isValidProp } from "./Utils/isValidProp.js"
 class AppState extends EventEmitter {
   /** @type {import('./Models/Value').Value[]} */
   values = []
-    /** @type {import('./Models/Task').Task[]} */
+  /** @type {import('./Models/Task').Task[]} */
   tasks = []
-  
+
   image = ""
-  clock = []
-  weather= []
-  quotes = "fuck this"
-  author = "suck ass"
- 
+
+  weather = 0
+  quotes = ""
+  author = ""
+
+
 
 }
 
