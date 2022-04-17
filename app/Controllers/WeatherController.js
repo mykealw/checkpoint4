@@ -11,6 +11,7 @@ function _drawWeather(){
     document.getElementById("weatherF").innerText = faren.toString()
 }
 
+let count = false
 
 export class WeatherController{
     constructor(){
@@ -18,21 +19,18 @@ export class WeatherController{
         this.getWeather()
         _drawWeather()
         // console.log("hello from weather");
-        
-        
     }
     
     _flip(){
-       let count = true
-       if( count){
+    if (count === true) {
            document.getElementById("weatherC").classList.add("d-none")
            document.getElementById("weatherF").classList.remove("d-none")
-           count = !count
-       }else{
+       } 
+    if(count === false) {
            document.getElementById("weatherC").classList.remove("d-none")
-           document.getElementById("weatherF").classList.add("d-none")
-           count = true
+           document.getElementById("weatherF").classList.add("d-none")   
        }
+       count = !count
     }
     async getWeather(){
         try {
